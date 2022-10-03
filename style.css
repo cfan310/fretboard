@@ -1,0 +1,8 @@
+:root {
+  --fretboard-height: 300;
+}
+.fretboard {
+  height: calc(var(--fretboard-height) * 1px);
+  width: 100%;
+  background-color: green;
+}
