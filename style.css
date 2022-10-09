@@ -6,3 +6,10 @@
   width: 100%;
   background-color: green;
 }
+
+.string {
+  height: 10px;
+  width: 100%;
+  background-color: gray;
+  margin: 40px;
+}
