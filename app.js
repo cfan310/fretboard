@@ -11,11 +11,6 @@
 // also fretboard learning mdoe, where it keeps track of your right and wrong answers and reports back to you which ones you need to work on
 // ^research best algorithm for keeping track of right and wrong data
 
-setTimeout(() => {
-  // if c4 piano is clicked, play c4 fretboard
-  console.log('say hello');
-}, '1000');
-
 // on click show and hide keyboard innerText note names
 const showBtn = document.getElementById('showBtn');
 const hideBtn = document.getElementById('hideBtn');
@@ -28,7 +23,6 @@ const c4key = document.querySelector('.C4-key');
 var c4audio = new Audio('sound files/C4.mp3');
 
 c4key.addEventListener('click', function () {
-  console.log('test');
   c4audio.play();
 });
 
