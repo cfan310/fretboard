@@ -1,4 +1,4 @@
-# Eat Trainer Browser App
+# Piano --> Guitar Eat Trainer Browser App
 
 Browser application written in HTML, CSS, and vanilla JavaScript that allows the user to click a note on the piano in any octave and hear the corresponding note from the guitar. 
 
