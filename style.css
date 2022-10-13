@@ -1,5 +1,5 @@
 :root {
-  --fretboard-height: 250px;
+  --fretboard-height: 250;
 }
 
 * {
@@ -13,9 +13,9 @@ body {
 
 .fretboard {
   display: flex;
-  flex-direction: column; /* top to bottom */
+  flex-direction: column; /*top to bottom*/
   height: calc(var(--fretboard-height) * 1px);
-  width: 100%; /* fill entire browser window across */
+  width: 100%;
   background-color: green;
   margin-top: 50px;
   background: rgb(231, 131, 7);
@@ -24,6 +24,16 @@ body {
 .string {
   height: 6px;
   width: 100%;
-  background-color: gray;
-  margin: 40px;
+  /*
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;*/
+}
+
+.piano {
+  display: flex;
+  height: 250px;
+  width: 100%;
+  background: red;
 }
