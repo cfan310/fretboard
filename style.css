@@ -1,16 +1,28 @@
 :root {
-  --fretboard-height: 300px;
+  --fretboard-height: 250px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(148, 147, 147);
 }
 
 .fretboard {
-  height: 100px; /*calc(var(--fretboard-height) * 1px)*/
-  width: 100%;
+  display: flex;
+  flex-direction: column; /* top to bottom */
+  height: calc(var(--fretboard-height) * 1px);
+  width: 100%; /* fill entire browser window across */
   background-color: green;
   margin-top: 50px;
+  background: rgb(231, 131, 7);
 }
 
 .string {
-  height: 10px;
+  height: 6px;
   width: 100%;
   background-color: gray;
   margin: 40px;
