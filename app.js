@@ -17,16 +17,16 @@ setTimeout(() => {
 }, '1000');
 
 // on click show and hide keyboard innerText note names
-
-// create variables for key-white and key-black
-var whiteKey = document.getElementsByClassName('key-white');
-var blackKey = document.getElementsByClassName('key-black');
 const showBtn = document.getElementById('showBtn');
 const hideBtn = document.getElementById('hideBtn');
 
-let g4key = document.querySelector('.key-white G4-key');
+// add sound file for each key; play on click
+// then add sound files for every fret (hard-code at first, then use a loop)
+// then add asynch await so one plays after another (if the user is in that particular mode of play)
 
-g4key.addEventListener('click', function () {
+const c4key = document.querySelector('.C4-key');
+
+c4key.addEventListener('click', function () {
   console.log('test');
 });
 
