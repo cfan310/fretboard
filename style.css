@@ -1,6 +1,8 @@
 :root {
   --fretboard-height: 250;
   --piano-height: 250;
+  --number-of-strings: 6;
+  --number-of-octaves: 8;
 }
 
 * {
@@ -46,57 +48,15 @@ body {
   flex-shrink: 1;
 }
 
-/*:root {
-  --fretboard-height: 250;
-  --piano-heightL 250;
-  --number-of-strings: 6;
-  --string-top-position: calc(
-    var(--fretboard-height) / var(--number-of-strings) / 2 -
-      var(--half-string-height)
-  );
+/*create the nut. use the first child of note-fret*/
+.note-fret:first-child {
+  background-color: black;
+  width: 5px;
 }
 
+/* PIANO PIANO PIANO */
 
-.fretboard {
-  display: flex;
-  flex-direction: column; /*top to bottom
-  height: calc(var(--fretboard-height) * 1px);
-  width: 100%;
-  margin-top: 40px;
-  background: rgb(231, 131, 7);
-}
-
-.string {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-/*show string color and give it some shadow
-.string:before {
-  content: '';
-  background: linear-gradient(rgb(177, 176, 176), rgb(142, 142, 141));
-  box-shadow: 60px 2px 8px rgb(128, 76, 2);
-  height: 6.5px;
-  /*stack position of 1
-  z-index: 1;
-  top: 20px;
-  position: absolute;
-  top: 15px; 
-}
-*/
-/* PIANO PIANO PIANO 
-
-.note-fret {
-  display: flex;
-  /* basis of 0 so it takes up the 100% width of the fretboard
-  flex-grow: 1; /* flex-grow: 1; flex-shrink: 1; flex-basis: 0;
-  flex-shrink: 1;
-  flex-basis: 0;
-}
-
-/* need to edit and put black keys directly on dividing lines, ::before the whitekey content
+/* need to edit and put black keys directly on dividing lines, ::before the whitekey content*/
 .piano {
   display: flex;
   flex-direction: row;
@@ -122,4 +82,3 @@ body {
 .hideBtn {
   display: none;
 }
-*/
