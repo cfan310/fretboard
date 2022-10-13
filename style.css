@@ -1,10 +1,12 @@
 :root {
-  --fretboard-height: 300;
+  --fretboard-height: 300px;
 }
+
 .fretboard {
-  height: calc(var(--fretboard-height) * 1px);
+  height: 100px; /*calc(var(--fretboard-height) * 1px)*/
   width: 100%;
   background-color: green;
+  margin-top: 50px;
 }
 
 .string {
