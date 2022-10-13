@@ -24,6 +24,14 @@ var blackKey = document.getElementsByClassName('key-black');
 const showBtn = document.getElementById('showBtn');
 const hideBtn = document.getElementById('hideBtn');
 
+let g4key = document.querySelector('.key-white G4-key');
+
+g4key.addEventListener('click', function () {
+  console.log('test');
+});
+
+/*
+
 function showNotes() {
   whiteKey.style.color = 'black';
   blackKey.style.color = 'white';
@@ -31,3 +39,4 @@ function showNotes() {
 }
 
 showBtn.addEventListener('click', showNotes);
+*/

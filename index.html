@@ -12,7 +12,7 @@
       <!--high e string-->
       <div class="string">
         <!--13 note frets since we need one extra for the open notes at the nut-->
-        <div class="note-fret">E</div>
+        <div class="note-fret"></div>
         <div class="note-fret"></div>
         <div class="note-fret"></div>
         <div class="note-fret"></div>
@@ -105,18 +105,30 @@
 
     <div class="piano">
       <!--13 notes to span one octave-->
-      <div class="key-white">C2</div>
-      <div class="key-black">C#</div>
-      <div class="key-white">D</div>
-      <div class="key-black">D#</div>
-      <div class="key-white">E</div>
-      <div class="key-white">F</div>
-      <div class="key-black">F#</div>
-      <div class="key-white">G</div>
-      <div class="key-black">G#</div>
-      <div class="key-white">A</div>
-      <div class="key-black">A#</div>
-      <div class="key-white">B</div>
+      <!--notes will be button elements; onclick, play sound-->
+
+      <div class="piano">
+        <button class="white-key C4-key"></button>
+        <button class="black-key Db4-key"></button>
+        <button class="white-key D4-key"></button>
+        <button class="black-key Eb4-key"></button>
+        <button class="white-key E4-key"></button>
+        <button class="white-key F4-key"></button>
+        <button class="black-key Gb4-key"></button>
+        <button class="white-key G4-key"></button>
+        <button class="black-key Ab4-key"></button>
+        <button class="white-key A4-key"></button>
+        <button class="black-key Bb4-key"></button>
+        <button class="white-key B4-key"></button>
+        <button class="white-key C5-key"></button>
+        <button class="black-key Db5-key"></button>
+        <button class="white-key D5-key"></button>
+        <button class="black-key Eb5-key"></button>
+        <button class="white-key E5-key"></button>
+        <!-- here we will add more octaves dynamically using javascript -->
+      </div>
+
+      <!--
       <div class="key-white">C3</div>
       <div class="key-black">C#</div>
       <div class="key-white">D</div>
@@ -165,11 +177,36 @@
       <div class="key-white">A</div>
       <div class="key-black">A#</div>
       <div class="key-white">B</div>
-      <div class="key-white">C</div>
+      <div class="key-white">C7</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C8</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>-->
     </div>
 
-    <button id="showBtn">Show Notes</button>
-    <button id="hideBtn">Hide Notes</button>
+    <div class="buttons">
+      <button id="showBtn">Show Notes</button>
+      <button id="hideBtn">Hide Notes</button>
+    </div>
 
     <script src="app.js"></script>
   </body>
