@@ -19,14 +19,15 @@ setTimeout(() => {
 // on click show and hide keyboard innerText note names
 
 // create variables for key-white and key-black
-//const whiteKey = document.getElementsByClassName('key-white');
-const blackKey = document.getElementsByClassName('key-black');
+var whiteKey = document.getElementsByClassName('key-white');
+var blackKey = document.getElementsByClassName('key-black');
 const showBtn = document.getElementById('showBtn');
 const hideBtn = document.getElementById('hideBtn');
 
 function showNotes() {
-  document.getElementsByClassName('key-white').style.color = 'black';
-  //blackKey.style.color = 'white';
+  whiteKey.style.color = 'black';
+  blackKey.style.color = 'white';
+  hideBtn.style.display = 'flex';
 }
 
 showBtn.addEventListener('click', showNotes);
