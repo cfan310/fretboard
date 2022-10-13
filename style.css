@@ -1,6 +1,6 @@
 :root {
-  --fretboard-height: 250;
-  --piano-height: 250;
+  --fretboard-height: 300;
+  --piano-height: 300;
   --number-of-strings: 6;
   --number-of-octaves: 8;
   --Db4-key-position: 22;
@@ -22,13 +22,17 @@ body {
   height: 100%;
 }
 
+.octave-selector {
+  display: flex;
+}
+
 .fretboard {
   display: flex;
   flex-direction: column;
   background: rgb(231, 131, 7);
   width: 100%;
   min-width: 1500px;
-  height: 250px;
+  height: 300px;
   margin-top: 40px;
 }
 
@@ -97,7 +101,7 @@ body {
   display: flex;
   position: relative;
   margin-left: 4px;
-  margin-top: 20px;
+  margin-top: 50px;
   justify-content: center;
 }
 
@@ -161,7 +165,23 @@ body {
   left: 660px;
 }
 
-.key-black {
+/* later we will add variables to the root and dynamically add black key logic*/
+.Gb5-key {
+  left: 800px;
+}
+
+.Ab5-key {
+  left: 885px;
+}
+
+.Bb5-key {
+  left: 965px;
+}
+
+.Db5-key {
+  left: 580px;
+}
+*/ .key-black {
   color: white;
 }
 
