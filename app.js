@@ -25,9 +25,11 @@ const hideBtn = document.getElementById('hideBtn');
 // then add asynch await so one plays after another (if the user is in that particular mode of play)
 
 const c4key = document.querySelector('.C4-key');
+var c4audio = new Audio('sound files/C4.mp3');
 
 c4key.addEventListener('click', function () {
   console.log('test');
+  c4audio.play();
 });
 
 /*
