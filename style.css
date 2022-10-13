@@ -1,5 +1,6 @@
 :root {
   --fretboard-height: 250;
+  --piano-height: 250;
 }
 
 * {
@@ -33,7 +34,19 @@ body {
 
 .piano {
   display: flex;
+  flex-direction: row;
   height: 250px;
   width: 100%;
-  background: red;
+  background: white;
+  margin-top: 50px;
+}
+
+.key-white {
+  border: 0.5px solid black;
+  width: 20px;
+}
+
+.key-black {
+  background-color: black;
+  height: calc(var(--piano-height) * 0.65 * 1px);
 }
