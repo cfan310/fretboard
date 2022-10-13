@@ -90,7 +90,7 @@ body {
   text-align: center;
   line-height: 30px;
   z-index: 2;
-  opacity: 50%;
+  opacity: 10%;
 }
 
 /* PIANO PIANO PIANO */
@@ -136,6 +136,10 @@ body {
 }
 
 /* previous key + 36px or previous key + 72px */
+
+.C4key:hover {
+  background: #900505;
+}
 
 .Db4-key {
   left: 50px;
