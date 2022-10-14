@@ -19,11 +19,20 @@ const hideBtn = document.getElementById('hideBtn');
 // then add sound files for every fret (hard-code at first, then use a loop)
 // then add asynch await so one plays after another (if the user is in that particular mode of play)
 
+// hard code at first; loop next?
+
 const c4key = document.querySelector('.C4-key');
 var c4audio = new Audio('sound files/C4.mp3');
 
 c4key.addEventListener('click', function () {
   c4audio.play();
+});
+
+const d4key = document.querySelector('.D4-key');
+var d4audio = new Audio('sound files/D4.mp3');
+
+d4key.addEventListener('click', function () {
+  d4audio.play();
 });
 
 /*
