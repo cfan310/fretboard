@@ -35,6 +35,8 @@ d4key.addEventListener('click', function () {
   d4audio.play();
 });
 
+// continue ading sounds, then finish the fretboard mouseover, then add fretboard sound, then add sound-for-sound logic, then add fretboard game logic
+
 /*
 
 function showNotes() {
