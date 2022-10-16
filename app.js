@@ -35,7 +35,7 @@ d4key.addEventListener('click', function () {
   d4audio.play();
 });
 
-const e5key = document.querySelector('.e5key');
+const e5key = document.querySelector('.e5key'); //
 
 // continue ading sounds, then finish the fretboard mouseover, then add fretboard sound, then add sound-for-sound logic, then add fretboard game logic
 
