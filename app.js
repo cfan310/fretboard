@@ -64,6 +64,13 @@ const B5 = new Audio('sound files/B5.mp3');
 
 // C4
 const C4key = document.querySelector('.C4-key');
+const playC4 = () => {
+  // play the sound (stored in variable) of selected variable when called
+  playSound(C4);
+  // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
+  C4key.classList.add('active');
+};
+
 const Db4key = document.querySelector('.Db4-key');
 const D4key = document.querySelector('.D4-key');
 const Eb4key = document.querySelector('.Eb4-key');
@@ -87,3 +94,13 @@ const Ab5key = document.querySelector('.Ab5-key');
 const A5key = document.querySelector('.A5-key');
 const Bb5key = document.querySelector('.Bb5-key');
 const B5key = document.querySelector('.B5-key');
+
+// function to set timeout when key sound is played; parameter of audio depending on key
+const playKeySound = (audio) => {
+  // return the audio node (e.g. return C4 into the clone variable)
+  const clone = audio.cloneNode();
+  // call play function on audio parameter
+  clone.play(); // e.g. C4.play();
+  // volume controls
+  setTimeout(() => (clone.volume = 0.6), 500);
+};
