@@ -34,6 +34,8 @@ const hideBtn = document.getElementById('hideBtn');
 
 // hard code at first; loop next?
 
+// audio variables
+// C4 octave
 const C4 = new Audio('sound files/C4.mp3');
 const Db4 = new Audio('sound files/Db4.mp3');
 const D4 = new Audio('sound files/D4.mp3');
@@ -46,7 +48,7 @@ const Ab4 = new Audio('sound files/Ab4.mp3');
 const A4 = new Audio('sound files/A4.mp3');
 const Bb4 = new Audio('sound files/Bb4.mp3');
 const B4 = new Audio('sound files/B4.mp3');
-// OCTAVE C5
+// C5 octave
 const C5 = new Audio('sound files/C5.mp3');
 const Db5 = new Audio('sound files/Db5.mp3');
 const D5 = new Audio('sound files/D5.mp3');
@@ -60,17 +62,7 @@ const A5 = new Audio('sound files/A5.mp3');
 const Bb5 = new Audio('sound files/Bb5.mp3');
 const B5 = new Audio('sound files/B5.mp3');
 
-//
-
-// C4
-const C4key = document.querySelector('.C4-key');
-const playC4 = () => {
-  // play the sound (stored in variable) of selected variable when called
-  playSound(C4);
-  // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
-  C4key.classList.add('active');
-};
-
+// key variables
 const Db4key = document.querySelector('.Db4-key');
 const D4key = document.querySelector('.D4-key');
 const Eb4key = document.querySelector('.Eb4-key');
@@ -101,6 +93,19 @@ const playKeySound = (audio) => {
   const clone = audio.cloneNode();
   // call play function on audio parameter
   clone.play(); // e.g. C4.play();
-  // volume controls
-  setTimeout(() => (clone.volume = 0.6), 500);
+  // volume controls (make the key volume fad out after being pressed)
+  setTimeout(() => (clone.volume = 0.8), 400);
+  setTimeout(() => (clone.volume = 0.6), 800);
+  setTimeout(() => (clone.volume = 0.4), 1200);
+  setTimeout(() => (clone.volume = 0.2), 1600);
+  setTimeout(() => (clone.volume = 0), 2000); // sound complete after 20000 ms
+};
+
+// C4
+const C4key = document.querySelector('.C4-key');
+const playC4 = () => {
+  // play the sound (stored in variable) of selected variable when called
+  playSound(C4);
+  // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
+  C4key.classList.add('active');
 };
