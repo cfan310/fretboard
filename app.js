@@ -64,18 +64,28 @@ const c4audio = new Audio('sound files/C4.mp3');
 c4key.addEventListener('click', function () {
   c4audio.play();
 });
-// Db4
-const db4audio = new Audio('sound files/Db4.mp3');
-db4key.addEventListener('click', function () {
-  d4audio.play();
-});
-// D4
-const d4audio = new Audio('sound files/D4.mp3');
-d4key.addEventListener('click', function () {
-  d4audio.play();
-});
-// Eb4
-const eb4audio = new Audio('sound files/Eb4.mp3');
-eb4key.addEventListener('click', function () {
-  eb4audio.play();
-});
+
+const C4 = new Audio('sound files/C4.mp3');
+const Db4 = new Audio('sound files/C4.mp3');
+const D4 = new Audio('sound files/C4.mp3');
+const Eb4 = new Audio('sound files/C4.mp3');
+const E4 = new Audio('sound files/C4.mp3');
+const F4 = document.querySelector('.F4-key');
+const Gb4 = document.querySelector('.Gb4-key');
+const G4 = document.querySelector('.G4-key');
+const Ab4 = document.querySelector('.Ab4-key');
+const A4 = document.querySelector('.A4-key');
+const Bb4 = document.querySelector('.Bb4-key');
+const B4 = document.querySelector('.B4-key');
+const C5 = document.querySelector('.C5-key');
+const Db5 = document.querySelector('.Db5-key');
+const D5 = document.querySelector('.D5-key');
+const Eb5 = document.querySelector('.Eb5-key');
+const E5 = document.querySelector('.E5-key');
+const F5 = document.querySelector('.F5-key');
+const Gb5 = document.querySelector('.Gb5-key');
+const G5 = document.querySelector('.G5-key');
+const Ab5 = document.querySelector('.Ab5-key');
+const A5 = document.querySelector('.A5-key');
+const Bb5 = document.querySelector('.Bb5-key');
+const B5 = document.querySelector('.B5-key');
