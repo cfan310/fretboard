@@ -50,7 +50,7 @@ const Bb4PianoAudio = new Audio('piano sound files/Bb4.mp3');
 const B4PianoAudio = new Audio('piano sound files/B4.mp3');
 // C5 octave
 const C5PianoAudio = new Audio('piano sound files/C5.mp3');
-const Db5PianoAudio = new Audio('piano sound files/Db5.mp3');
+const Db5PianoAudio = new Audio('piano sound files/Db5.wav');
 const D5PianoAudio = new Audio('piano sound files/D5.mp3');
 const Eb5PianoAudio = new Audio('piano sound files/Eb5.mp3');
 const E5PianoAudio = new Audio('piano sound files/E5.mp3');
@@ -222,17 +222,16 @@ const playC5 = () => {
   setTimeout(() => C5key.classList.remove('active'), 200);
 };
 C5key.addEventListener('click', playC5);
-/*
-// pass C4 into playC4 function (which in turn triggers the playKeySound function with C4 as the audio parameter)
-C4key.addEventListener('click', playC4);
-// Db4
-const Db4key = document.querySelector('.Db4-key');
-const playDb4 = () => {
-  playKeySound(Db4PianoAudio);
-  Db4key.classList.add('active');
-  setTimeout(() => Db4key.classList.remove('active'), 200);
+
+// Db5 need cleaner audio
+const Db5key = document.querySelector('.Db5-key');
+const playDb5 = () => {
+  playKeySound(Db5PianoAudio);
+  Db5key.classList.add('active');
+  setTimeout(() => Db5key.classList.remove('active'), 200);
 };
-Db4key.addEventListener('click', playDb4);
+Db5key.addEventListener('click', playDb5);
+/*
 // D4
 const D4key = document.querySelector('.D4-key');
 const playD4 = () => {
