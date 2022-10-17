@@ -34,6 +34,34 @@ const hideBtn = document.getElementById('hideBtn');
 
 // hard code at first; loop next?
 
+const C4 = new Audio('sound files/C4.mp3');
+const Db4 = new Audio('sound files/Db4.mp3');
+const D4 = new Audio('sound files/D4.mp3');
+const Eb4 = new Audio('sound files/Eb4.mp3');
+const E4 = new Audio('sound files/E4.mp3');
+const F4 = new Audio('sound files/F4.mp3');
+const Gb4 = new Audio('sound files/Gb4.mp3');
+const G4 = new Audio('sound files/G4.mp3');
+const Ab4 = new Audio('sound files/Ab4.mp3');
+const A4 = new Audio('sound files/A4.mp3');
+const Bb4 = new Audio('sound files/Bb4.mp3');
+const B4 = new Audio('sound files/B4.mp3');
+// OCTAVE C5
+const C5 = new Audio('sound files/C5.mp3');
+const Db5 = new Audio('sound files/Db5.mp3');
+const D5 = new Audio('sound files/D5.mp3');
+const Eb5 = new Audio('sound files/Eb5.mp3');
+const E5 = new Audio('sound files/E5.mp3');
+const F5 = new Audio('sound files/F5.mp3');
+const Gb5 = new Audio('sound files/Gb5.mp3');
+const G5 = new Audio('sound files/G5.mp3');
+const Ab5 = new Audio('sound files/Ab5.mp3');
+const A5 = new Audio('sound files/A5.mp3');
+const Bb5 = new Audio('sound files/Bb5.mp3');
+const B5 = new Audio('sound files/B5.mp3');
+
+//
+
 // C4
 const C4key = document.querySelector('.C4-key');
 const Db4key = document.querySelector('.Db4-key');
@@ -59,33 +87,3 @@ const Ab5key = document.querySelector('.Ab5-key');
 const A5key = document.querySelector('.A5-key');
 const Bb5key = document.querySelector('.Bb5-key');
 const B5key = document.querySelector('.B5-key');
-
-const c4audio = new Audio('sound files/C4.mp3');
-c4key.addEventListener('click', function () {
-  c4audio.play();
-});
-
-const C4 = new Audio('sound files/C4.mp3');
-const Db4 = new Audio('sound files/C4.mp3');
-const D4 = new Audio('sound files/C4.mp3');
-const Eb4 = new Audio('sound files/C4.mp3');
-const E4 = new Audio('sound files/C4.mp3');
-const F4 = document.querySelector('.F4-key');
-const Gb4 = document.querySelector('.Gb4-key');
-const G4 = document.querySelector('.G4-key');
-const Ab4 = document.querySelector('.Ab4-key');
-const A4 = document.querySelector('.A4-key');
-const Bb4 = document.querySelector('.Bb4-key');
-const B4 = document.querySelector('.B4-key');
-const C5 = document.querySelector('.C5-key');
-const Db5 = document.querySelector('.Db5-key');
-const D5 = document.querySelector('.D5-key');
-const Eb5 = document.querySelector('.Eb5-key');
-const E5 = document.querySelector('.E5-key');
-const F5 = document.querySelector('.F5-key');
-const Gb5 = document.querySelector('.Gb5-key');
-const G5 = document.querySelector('.G5-key');
-const Ab5 = document.querySelector('.Ab5-key');
-const A5 = document.querySelector('.A5-key');
-const Bb5 = document.querySelector('.Bb5-key');
-const B5 = document.querySelector('.B5-key');
