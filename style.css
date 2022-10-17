@@ -12,6 +12,19 @@
   --Eb4-key-position: 310;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+#header a {
+  text-decoration: none;
+  color: rgb(44, 155, 44);
+  border: 2px solid;
+  border-radius: 20%;
+  font-size: 30px;
+}
+
 * {
   margin: 0;
   padding: 0;
