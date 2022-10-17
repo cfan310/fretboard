@@ -36,31 +36,34 @@ const hideBtn = document.getElementById('hideBtn');
 
 // audio variables
 // C4 octave
-const C4 = new Audio('sound files/C4.mp3');
-const Db4 = new Audio('sound files/Db4.mp3');
-const D4 = new Audio('sound files/D4.mp3');
-const Eb4 = new Audio('sound files/Eb4.mp3');
-const E4 = new Audio('sound files/E4.mp3');
-const F4 = new Audio('sound files/F4.mp3');
-const Gb4 = new Audio('sound files/Gb4.mp3');
-const G4 = new Audio('sound files/G4.mp3');
-const Ab4 = new Audio('sound files/Ab4.mp3');
-const A4 = new Audio('sound files/A4.mp3');
-const Bb4 = new Audio('sound files/Bb4.mp3');
-const B4 = new Audio('sound files/B4.mp3');
+const C4PianoAudio = new Audio('piano sound files/C4.mp3');
+const Db4PianoAudio = new Audio('piano sound files/Db4.mp3');
+const D4PianoAudio = new Audio('piano sound files/D4.mp3');
+const Eb4PianoAudio = new Audio('piano sound files/Eb4.mp3');
+const E4PianoAudio = new Audio('piano sound files/E4.mp3');
+const F4PianoAudio = new Audio('piano sound files/F4.mp3');
+const Gb4PianoAudio = new Audio('piano sound files/Gb4.mp3');
+const G4PianoAudio = new Audio('piano sound files/G4.mp3');
+const Ab4PianoAudio = new Audio('piano sound files/Ab4.mp3');
+const A4PianoAudio = new Audio('piano sound files/A4.mp3');
+const Bb4PianoAudio = new Audio('piano sound files/Bb4.mp3');
+const B4PianoAudio = new Audio('piano sound files/B4.mp3');
 // C5 octave
-const C5 = new Audio('sound files/C5.mp3');
-const Db5 = new Audio('sound files/Db5.mp3');
-const D5 = new Audio('sound files/D5.mp3');
-const Eb5 = new Audio('sound files/Eb5.mp3');
-const E5 = new Audio('sound files/E5.mp3');
-const F5 = new Audio('sound files/F5.mp3');
-const Gb5 = new Audio('sound files/Gb5.mp3');
-const G5 = new Audio('sound files/G5.mp3');
-const Ab5 = new Audio('sound files/Ab5.mp3');
-const A5 = new Audio('sound files/A5.mp3');
-const Bb5 = new Audio('sound files/Bb5.mp3');
-const B5 = new Audio('sound files/B5.mp3');
+const C5PianoAudio = new Audio('piano sound files/C5.mp3');
+const Db5PianoAudio = new Audio('piano sound files/Db5.mp3');
+const D5PianoAudio = new Audio('piano sound files/D5.mp3');
+const Eb5PianoAudio = new Audio('piano sound files/Eb5.mp3');
+const E5PianoAudio = new Audio('piano sound files/E5.mp3');
+const F5PianoAudio = new Audio('piano sound files/F5.mp3');
+const Gb5PianoAudio = new Audio('piano sound files/Gb5.mp3');
+const G5PianoAudio = new Audio('piano sound files/G5.mp3');
+const Ab5PianoAudio = new Audio('piano sound files/Ab5.mp3');
+const A5PianoAudio = new Audio('piano sound files/A5.mp3');
+const Bb5PianoAudio = new Audio('piano sound files/Bb5.mp3');
+const B5PianoAudio = new Audio('piano sound files/B5.mp3');
+
+// GUITAR
+// const C4GuitarAudio = new Audio('guitar sound files/C4.mp3');
 
 // key variables
 //const Db4key = document.querySelector('.Db4-key');
@@ -68,12 +71,12 @@ const B5 = new Audio('sound files/B5.mp3');
 //const Eb4key = document.querySelector('.Eb4-key');
 //const E4key = document.querySelector('.E4-key');
 //const F4key = document.querySelector('.F4-key');
-const Gb4key = document.querySelector('.Gb4-key');
-const G4key = document.querySelector('.G4-key');
-const Ab4key = document.querySelector('.Ab4-key');
-const A4key = document.querySelector('.A4-key');
-const Bb4key = document.querySelector('.Bb4-key');
-const B4key = document.querySelector('.B4-key');
+//const Gb4key = document.querySelector('.Gb4-key');
+//const G4key = document.querySelector('.G4-key');
+//const Ab4key = document.querySelector('.Ab4-key');
+//const A4key = document.querySelector('.A4-key');
+//const Bb4key = document.querySelector('.Bb4-key');
+//const B4key = document.querySelector('.B4-key');
 const C5key = document.querySelector('.C5-key');
 const Db5key = document.querySelector('.Db5-key');
 const D5key = document.querySelector('.D5-key');
@@ -105,7 +108,8 @@ const playKeySound = (audio) => {
 const C4key = document.querySelector('.C4-key');
 const playC4 = () => {
   // play the sound (stored in variable) of selected variable when called
-  playKeySound(C4);
+  playKeySound(C4PianoAudio);
+  // TO ILLUMINATE THE NOTE AND OCTAVE NAME: display the note and octave name when pressed; add async
   // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
   C4key.classList.add('active');
   // remove active so it resets after a few miliseconds
@@ -116,7 +120,7 @@ C4key.addEventListener('click', playC4);
 // Db4
 const Db4key = document.querySelector('.Db4-key');
 const playDb4 = () => {
-  playKeySound(Db4);
+  playKeySound(Db4PianoAudio);
   Db4key.classList.add('active');
   setTimeout(() => Db4key.classList.remove('active'), 200);
 };
@@ -124,7 +128,7 @@ Db4key.addEventListener('click', playDb4);
 // D4
 const D4key = document.querySelector('.D4-key');
 const playD4 = () => {
-  playKeySound(D4);
+  playKeySound(D4PianoAudio);
   D4key.classList.add('active');
   setTimeout(() => D4key.classList.remove('active'), 200);
 };
@@ -132,7 +136,7 @@ D4key.addEventListener('click', playD4);
 // Eb4
 const Eb4key = document.querySelector('.Eb4-key');
 const playEb4 = () => {
-  playKeySound(Eb4);
+  playKeySound(Eb4PianoAudio);
   Eb4key.classList.add('active');
   setTimeout(() => Eb4key.classList.remove('active'), 200);
 };
@@ -140,7 +144,7 @@ Eb4key.addEventListener('click', playEb4);
 // E4
 const E4key = document.querySelector('.E4-key');
 const playE4 = () => {
-  playKeySound(E4);
+  playKeySound(E4PianoAudio);
   E4key.classList.add('active');
   setTimeout(() => E4key.classList.remove('active'), 200);
 };
@@ -148,8 +152,67 @@ E4key.addEventListener('click', playE4);
 // F4
 const F4key = document.querySelector('.F4-key');
 const playF4 = () => {
-  playKeySound(F4);
+  playKeySound(F4PianoAudio);
   F4key.classList.add('active');
   setTimeout(() => F4.classList.remove('active'), 200);
 };
 F4key.addEventListener('click', playF4);
+// Gb4
+const Gb4key = document.querySelector('.Gb4-key');
+const playGb4 = () => {
+  playKeySound(Gb4PianoAudio);
+  Gb4key.classList.add('active');
+  setTimeout(() => Gb4key.classList.remove('active'), 200);
+};
+Gb4key.addEventListener('click', playGb4);
+// G4
+const G4key = document.querySelector('.G4-key');
+const playG4 = () => {
+  playKeySound(G4PianoAudio);
+  G4key.classList.add('active');
+  setTimeout(() => G4key.classList.remove('active'), 200);
+};
+G4key.addEventListener('click', playG4);
+// Ab4
+const Ab4key = document.querySelector('.Ab4-key');
+const playAb4 = () => {
+  playKeySound(Ab4PianoAudio);
+  Ab4key.classList.add('active');
+  setTimeout(() => Ab4key.classList.remove('active'), 200);
+};
+Ab4key.addEventListener('click', playAb4);
+// A4
+const A4key = document.querySelector('.A4-key');
+const playA4 = () => {
+  playKeySound(A4PianoAudio);
+  A4key.classList.add('active');
+  setTimeout(() => A4key.classList.remove('active'), 200);
+};
+A4key.addEventListener('click', playA4);
+// Bb4
+const Bb4key = document.querySelector('.Bb4-key');
+const playBb4 = () => {
+  playKeySound(Bb4PianoAudio);
+  Bb4key.classList.add('active');
+  setTimeout(() => Bb4key.classList.remove('active'), 200);
+};
+Bb4key.addEventListener('click', playBb4);
+// B4
+const B4key = document.querySelector('.B4-key');
+const playB4 = () => {
+  playKeySound(B4PianoAudio);
+  B4key.classList.add('active');
+  setTimeout(() => B4key.classList.remove('active'), 200);
+};
+B4key.addEventListener('click', playBb4);
+
+/*
+if earTrainerMode() is turned on, then 
+const F4TrainMode = const playF4 = () => {
+  playKeySound(F4);
+  F4key.classList.add('active');
+  setTimeout(() => F4.classList.remove('active'), 200);
+};  
+
+
+*/
