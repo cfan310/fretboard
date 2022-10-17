@@ -63,11 +63,11 @@ const Bb5 = new Audio('sound files/Bb5.mp3');
 const B5 = new Audio('sound files/B5.mp3');
 
 // key variables
-const Db4key = document.querySelector('.Db4-key');
-const D4key = document.querySelector('.D4-key');
-const Eb4key = document.querySelector('.Eb4-key');
-const E4key = document.querySelector('.E4-key');
-const F4key = document.querySelector('.F4-key');
+//const Db4key = document.querySelector('.Db4-key');
+//const D4key = document.querySelector('.D4-key');
+//const Eb4key = document.querySelector('.Eb4-key');
+//const E4key = document.querySelector('.E4-key');
+//const F4key = document.querySelector('.F4-key');
 const Gb4key = document.querySelector('.Gb4-key');
 const G4key = document.querySelector('.G4-key');
 const Ab4key = document.querySelector('.Ab4-key');
@@ -105,7 +105,51 @@ const playKeySound = (audio) => {
 const C4key = document.querySelector('.C4-key');
 const playC4 = () => {
   // play the sound (stored in variable) of selected variable when called
-  playSound(C4);
+  playKeySound(C4);
   // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
   C4key.classList.add('active');
+  // remove active so it resets after a few miliseconds
+  setTimeout(() => C4key.classList.remove('active'), 200);
 };
+// pass C4 into playC4 function (which in turn triggers the playKeySound function with C4 as the audio parameter)
+C4key.addEventListener('click', playC4);
+// Db4
+const Db4key = document.querySelector('.Db4-key');
+const playDb4 = () => {
+  playKeySound(Db4);
+  Db4key.classList.add('active');
+  setTimeout(() => Db4key.classList.remove('active'), 200);
+};
+Db4key.addEventListener('click', playDb4);
+// D4
+const D4key = document.querySelector('.D4-key');
+const playD4 = () => {
+  playKeySound(D4);
+  D4key.classList.add('active');
+  setTimeout(() => D4key.classList.remove('active'), 200);
+};
+D4key.addEventListener('click', playD4);
+// Eb4
+const Eb4key = document.querySelector('.Eb4-key');
+const playEb4 = () => {
+  playKeySound(Eb4);
+  Eb4key.classList.add('active');
+  setTimeout(() => Eb4key.classList.remove('active'), 200);
+};
+Eb4key.addEventListener('click', playEb4);
+// E4
+const E4key = document.querySelector('.E4-key');
+const playE4 = () => {
+  playKeySound(E4);
+  E4key.classList.add('active');
+  setTimeout(() => E4key.classList.remove('active'), 200);
+};
+E4key.addEventListener('click', playE4);
+// F4
+const F4key = document.querySelector('.F4-key');
+const playF4 = () => {
+  playKeySound(F4);
+  F4key.classList.add('active');
+  setTimeout(() => F4.classList.remove('active'), 200);
+};
+F4key.addEventListener('click', playF4);
