@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+
 :root {
   --fretboard-height: 300;
   --piano-height: 300;
@@ -17,12 +19,18 @@
   justify-content: center;
 }
 
+#header {
+  margin-top: 25px;
+}
 #header a {
   text-decoration: none;
-  color: rgb(44, 155, 44);
+  background: green;
+  color: white;
   border: 2px solid;
-  border-radius: 20%;
-  font-size: 30px;
+  border-radius: 40%;
+  font-size: 25px;
+  font-family: 'Gemunu Libre', 'sans-sherif';
+  padding: 6px;
 }
 
 * {
@@ -157,10 +165,12 @@ body {
 
 .Db4-key {
   left: 50px;
+  color: #000000;
 }
 
 .Eb4-key {
   left: 125px;
+  color: white;
 }
 
 .Gb4-key {
@@ -199,7 +209,8 @@ body {
 .Db5-key {
   left: 580px;
 }
-*/ .key-black {
+
+.key-black {
   color: white;
 }
 
