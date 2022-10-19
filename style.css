@@ -111,7 +111,12 @@ body {
   text-align: center;
   line-height: 30px;
   z-index: 2;
-  opacity: 90%;
+  opacity: 0;
+}
+
+/* show guitar note name on hover*/
+.note-fret:hover:before {
+  opacity: 1;
 }
 
 /* PIANO PIANO PIANO */
