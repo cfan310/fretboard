@@ -39,6 +39,10 @@ body {
   display: flex;
 }
 
+/* PIANO PIANO PIANO */
+
+/* need to edit and put black keys directly on dividing lines, ::before the whitekey content*/
+
 .piano {
   display: flex;
   position: relative;
@@ -130,7 +134,8 @@ body {
 .Db5-key {
   left: 580px;
 }
-*/ .key-black {
+
+.key-black {
   color: white;
 }
 

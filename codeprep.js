@@ -1,19 +1,19 @@
 // workspace to show piano note names on click (then settimeout so they disappear)
 
-/*
-
-function showNotes() {
-  whiteKey.style.color = 'black';
-  blackKey.style.color = 'white';
-  hideBtn.style.display = 'flex';
-}
-
-showBtn.addEventListener('click', showNotes);
-*/
-
 // on click show and hide keyboard innerText note names
-const showBtn = document.getElementById('showBtn');
-const hideBtn = document.getElementById('hideBtn');
+const showBtn = document.querySelector('.showBtn');
+const hideBtn = document.querySelector('.hideBtn');
+// piano container div
+const piano = document.querySelector('.piano');
+
+// show notes on click
+/* function showNotesOnClick() {
+    showBtn.addEventListener('click', function() {
+        css root variable selecting all buttons (or use the div?)
+        
+    })
+}
+*/
 
 // add sound file for each key; play on click
 // then add sound files for every fret (hard-code at first, then use a loop)
