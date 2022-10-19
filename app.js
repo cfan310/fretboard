@@ -232,7 +232,7 @@ const playDb5 = () => {
 };
 Db5key.addEventListener('click', playDb5);
 
-// rename to not confuse with guitar fretboard notes
+// rename to not confuse with guitar fretboard notes.
 /*
 // D4
 const D4key = document.querySelector('.D4-key');
