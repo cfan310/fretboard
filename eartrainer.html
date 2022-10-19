@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ear Trainer</title>
+    <title>Interactive Fretboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="menu">
@@ -15,5 +16,216 @@
         <a href="index.html">Keyboard Learner</a>
       </header>
     </div>
+
+    <div class="piano">
+      <!--13 notes to span one octave-->
+      <!--notes will be button elements; onclick, play sound-->
+
+      <div class="octave-selector"></div>
+
+      <div class="piano">
+        <button class="white-key C4-key">C</button>
+        <button class="black-key Db4-key">C#/Db</button>
+        <button class="white-key D4-key"></button>
+        <button class="black-key Eb4-key"></button>
+        <button class="white-key E4-key"></button>
+        <button class="white-key F4-key"></button>
+        <button class="black-key Gb4-key"></button>
+        <button class="white-key G4-key"></button>
+        <button class="black-key Ab4-key"></button>
+        <button class="white-key A4-key"></button>
+        <button class="black-key Bb4-key"></button>
+        <button class="white-key B4-key"></button>
+        <button class="white-key C5-key"></button>
+        <button class="black-key Db5-key"></button>
+        <button class="white-key D5-key"></button>
+        <button class="black-key Eb5-key"></button>
+        <button class="white-key E5-key"></button>
+        <button class="white-key F5-key"></button>
+        <button class="black-key Gb5-key"></button>
+        <button class="white-key G5-key"></button>
+        <button class="black-key Ab5-key"></button>
+        <button class="white-key A5-key"></button>
+        <button class="black-key Bb5-key"></button>
+        <button class="white-key B5-key"></button>
+        <!-- here we will add more octaves dynamically using javascript -->
+      </div>
+
+      <!--
+      <div class="key-white">C3</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C4</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C5</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C6</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C7</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>
+      <div class="key-white">C8</div>
+      <div class="key-black">C#</div>
+      <div class="key-white">D</div>
+      <div class="key-black">D#</div>
+      <div class="key-white">E</div>
+      <div class="key-white">F</div>
+      <div class="key-black">F#</div>
+      <div class="key-white">G</div>
+      <div class="key-black">G#</div>
+      <div class="key-white">A</div>
+      <div class="key-black">A#</div>
+      <div class="key-white">B</div>-->
+    </div>
+
+    <div class="fretboard">
+      <!--high e string-->
+      <div class="string">
+        <!--13 note frets since we need one extra for the open notes at the nut-->
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+      <div class="string">
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+      <div class="string">
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+      <div class="string">
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+      <div class="string">
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+      <div class="string">
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+        <div class="note-fret"></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="showBtn">Show Notes</button>
+      <button id="hideBtn">Hide Notes</button>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
