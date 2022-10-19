@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
 
 :root {
   --fretboard-height: 300;
@@ -27,13 +27,14 @@
   background: green;
   color: white;
   border: 2px solid;
-  border-radius: 30%;
+  border-radius: 40%;
   font-size: 25px;
-  font-family: 'Sulphur Point';
+  font-family: 'Gemunu Libre', 'sans-sherif';
+  padding: 6px;
 }
 
 .hideBtn {
-  visibility: none;
+  visibility: hidden;
 }
 
 .buttons {

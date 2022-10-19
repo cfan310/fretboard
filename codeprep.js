@@ -10,10 +10,37 @@ const piano = document.querySelector('.piano');
 /* function showNotesOnClick() {
     showBtn.addEventListener('click', function() {
         css root variable selecting all buttons (or use the div?)
-        
+        hideBtn.style.visibility = 'visible';
+        C4key.innerText = 'C';
+        hideBtn.addEventListener('click', function() {
+            C4key.innerText = ''; none
+        })
     })
 }
 */
+function showNotesOnClick() {
+  showBtn.addEventListener('click', function () {
+    // make them bolder
+    hideBtn.style.visibility = 'visible';
+    C4key.innerText = 'C';
+    Db4key.innerText = 'C#/Db';
+    Db4key.style.color = 'white';
+    D4key.innerText = 'D';
+    Eb4key.innerText = 'D#/Eb';
+    Eb4key.style.color = 'white';
+  });
+}
+
+showNotesOnClick();
+
+hideBtn.addEventListener('click', function () {
+  C4key.innerText = '';
+  Db4key.innerText = '';
+  D4key.innerText = '';
+  Eb4key.innerText = '';
+
+  hideBtn.style.visibility = 'hidden';
+});
 
 // add sound file for each key; play on click
 // then add sound files for every fret (hard-code at first, then use a loop)
@@ -54,6 +81,7 @@ const B5PianoAudio = new Audio('piano sound files/B5.mp3');
 // const C4GuitarAudio = new Audio('guitar sound files/C4.mp3');
 
 // key variables
+// const C4key = document.querySelector('.C4-key');
 //const Db4key = document.querySelector('.Db4-key');
 //const D4key = document.querySelector('.D4-key');
 //const Eb4key = document.querySelector('.Eb4-key');
@@ -316,3 +344,4 @@ const F4TrainMode = const playF4 = () => {
 
 
 */
+console.log(C4key.innerText);
