@@ -1,0 +1,260 @@
+:root {
+  --fretboard-height: 300;
+  --piano-height: 300;
+  --number-of-strings: 6;
+  --number-of-octaves: 8;
+  --Db4-key-position: 22;
+  --Eb4-key-position: 58;
+  --Gb-key-position: 130;
+  --Ab4-key-position: 166;
+  --Bb4-key-position: 202;
+  --Db4-key-position: 274;
+  --Eb4-key-position: 310;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+#header a {
+  text-decoration: none;
+  color: rgb(44, 155, 44);
+  border: 2px solid;
+  border-radius: 20%;
+  font-size: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(100, 98, 98);
+  height: 100%;
+}
+
+.octave-selector {
+  display: flex;
+}
+
+.fretboard {
+  display: flex;
+  flex-direction: column;
+  background: rgb(231, 131, 7);
+  width: 100%;
+  min-width: 1500px;
+  height: 300px;
+  margin-top: 40px;
+}
+
+.string {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.string:before {
+  content: '';
+  width: 100%;
+  height: 6.5px;
+  background: linear-gradient(rgb(213, 206, 206), rgb(156, 154, 154));
+  box-shadow: 60px 5px 8px #744b07;
+  z-index: 1;
+  position: absolute;
+  top: 15px /*calc(var(--string-top-position) * 1px)*/;
+}
+
+.note-fret {
+  /* fit each fret to the full width of the fretboard*/
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center; /*position center horizontally and vertically in the fret*/
+  align-items: center;
+  z-index: 2;
+  border-right: 6.5px solid;
+  /* give the frets some fade from left to right*/
+  border-image: linear-gradient(
+      to right,
+      rgb(151, 148, 148),
+      rgb(231, 229, 229),
+      rgb(183, 180, 180)
+    )
+    1 100%;
+}
+
+/*create the nut. use the first child of note-fret*/
+.note-fret:first-child {
+  background-color: black;
+  min-width: 60px;
+  border-right: 10px solid;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.note-fret:before {
+  content: 'C#';
+  height: 30px;
+  width: 30px;
+  background-color: rgb(44, 155, 44);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  z-index: 2;
+  opacity: 90%;
+}
+
+/* PIANO PIANO PIANO */
+
+/* need to edit and put black keys directly on dividing lines, ::before the whitekey content*/
+
+.piano {
+  display: flex;
+  position: relative;
+  margin-left: 4px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.white-key {
+  width: 80px;
+  height: 240px;
+  background-color: #fff;
+  border: 4px solid black;
+  border-radius: 0 0 6px 6px;
+  margin-left: -4px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* key color changes when play fucntion is called (e.g. key is clicked in browser*/
+.white-key.active {
+  background-color: #7a7878;
+}
+
+.black-key {
+  position: absolute;
+  width: 48px;
+  height: 160px;
+  background-image: linear-gradient(#000000, #303030);
+  border: 3px solid black;
+  border-radius: 0 0 2px 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.black-key.active {
+  background-image: linear-gradient(#000000, #0b0b0b);
+}
+
+/* previous key + 36px or previous key + 72px */
+
+.C4key:hover {
+  background: #900505;
+}
+
+.Db4-key {
+  left: 50px;
+  color: #000000;
+}
+
+.Eb4-key {
+  left: 125px;
+  color: white;
+}
+
+.Gb4-key {
+  left: 280px;
+}
+
+.Ab4-key {
+  left: 355px;
+}
+
+.Bb4-key {
+  left: 430px;
+}
+
+.Db5-key {
+  left: 580px;
+}
+
+.Eb5-key {
+  left: 660px;
+}
+
+/* later we will add variables to the root and dynamically add black key logic*/
+.Gb5-key {
+  left: 800px;
+}
+
+.Ab5-key {
+  left: 885px;
+}
+
+.Bb5-key {
+  left: 965px;
+}
+
+.Db5-key {
+  left: 580px;
+}
+*/ .key-black {
+  color: white;
+}
+
+/*
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    width: fit-content;
+    background: white;
+    margin-top: 40px;
+    margin-left: 45px;
+    border: 1px solid black;
+    justify-content: center;
+  }
+  
+  .key-white {
+    border: 0.5px solid black;
+    width: 35px;
+    color: black;
+  }
+  
+  
+  .key-white:first-child {
+    background-color: rgb(120, 119, 119);
+    min-width: 60px;
+    border-right: 10px solid;
+    flex-grow: 0;
+    flex-shrink: 0;          
+  }
+  
+  .key-white:last-child {
+    background-color: rgb(126, 126, 126);
+    min-width: 60px;
+    border-right: 10px solid;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  .key-black {
+    width: 20px;
+    background-color: black;
+    height: calc(var(--piano-height) * 0.65 * 1px);
+    color: white;
+  }
+  */
+#hideBtn {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
