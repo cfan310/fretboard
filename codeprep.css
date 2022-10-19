@@ -45,6 +45,12 @@
   gap: 20px;
 }
 
+/*hover over all notes and display their names by turning on visibility*/
+.C4key:hover,
+.Db4-key:hover {
+  background-color: yellow;
+}
+
 * {
   margin: 0;
   padding: 0;
