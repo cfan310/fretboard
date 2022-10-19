@@ -49,6 +49,7 @@ const A4PianoAudio = new Audio('piano sound files/A4.mp3');
 const Bb4PianoAudio = new Audio('piano sound files/Bb4.mp3');
 const B4PianoAudio = new Audio('piano sound files/B4.mp3');
 // C5 octave
+
 const C5PianoAudio = new Audio('piano sound files/C5.mp3');
 const Db5PianoAudio = new Audio('piano sound files/Db5.wav');
 const D5PianoAudio = new Audio('piano sound files/D5.mp3');
@@ -116,6 +117,8 @@ const playC4 = () => {
   C4key.classList.add('active');
   // remove active so it resets after a few miliseconds
   setTimeout(() => C4key.classList.remove('active'), 200);
+  // LIGHT UP THE C4 KEY WHEN IT IS PLAYED FOR THE ENTIRETY OF THE NOTE SOUND
+  setTimeout(() => playKeySound(C4GuitarAudio), 1500);
 };
 // pass C4 into playC4 function (which in turn triggers the playKeySound function with C4 as the audio parameter)
 C4key.addEventListener('click', playC4);
@@ -123,6 +126,8 @@ C4key.addEventListener('click', playC4);
 const Db4key = document.querySelector('.Db4-key');
 const playDb4 = () => {
   playKeySound(Db4PianoAudio);
+  // here we will display the note name when we press and set a similar timeout for 200
+  Db4key.style.color = 'white';
   Db4key.classList.add('active');
   setTimeout(() => Db4key.classList.remove('active'), 200);
 };
@@ -326,3 +331,19 @@ const F4TrainMode = const playF4 = () => {
 
 
 */
+
+// GUITAR
+
+const C4GuitarNote = document.getElementById('C4GuitarNote');
+const C4GuitarAudio = new Audio('guitar sound files/C4Guitar.mp3');
+
+const playC4Guitar = () => {
+  // play the sound (stored in variable) of selected variable when called
+  playKeySound(C4GuitarAudio);
+  // TO ILLUMINATE THE NOTE AND OCTAVE NAME: display the note and octave name when pressed; add async
+  // add 'active' to the class of the C4 key when function is called (tied to css since we will make it darker color when key is pressed)
+  C4GuitarNote.classList.add('active');
+  // remove active so it resets after a few miliseconds
+  setTimeout(() => C4GuitarNote.classList.remove('active'), 200);
+};
+C4GuitarNote.addEventListener('mouseover', playC4Guitar);
