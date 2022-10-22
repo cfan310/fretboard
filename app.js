@@ -347,3 +347,5 @@ const playC4Guitar = () => {
   setTimeout(() => C4GuitarNote.classList.remove('active'), 200);
 };
 C4GuitarNote.addEventListener('mouseover', playC4Guitar);
+
+// import rest of gutiar files and add asynch sound
