@@ -348,4 +348,6 @@ const playC4Guitar = () => {
 };
 C4GuitarNote.addEventListener('mouseover', playC4Guitar);
 
+// ^not playing atm on mouseover
+
 // import rest of gutiar files and add asynch sound
