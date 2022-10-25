@@ -106,6 +106,26 @@ const playKeySound = (audio) => {
   setTimeout(() => (clone.volume = 0), 2000); // sound complete after 20000 ms
 };
 
+// SHOW THE NOTE THAT IS CLICKED 
+
+const C4PianoLight = document.getElementsByClassName('C4-key');
+console.log(C4PianoLight.innerText); // should be C4 
+
+/* in css .white-key:before {
+  content: 'C'; // we will dynamically code w/ loop later 
+  height: 30px;
+  width: 30px;
+  background-color: green; 
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  z-index: 2;  
+  opacity: 0;
+  
+  onclick, the C4 immediately changes css opacity to 1, and sets timeout to end same time as note finishes playing 
+}*/ 
+
+
 // C4 OCTAVE AUDIO TIME CONTROLS
 // C4
 const C4key = document.querySelector('.C4-key');
@@ -118,7 +138,10 @@ const playC4 = () => {
   // remove active so it resets after a few miliseconds
   setTimeout(() => C4key.classList.remove('active'), 200);
   // LIGHT UP THE C4 KEY WHEN IT IS PLAYED FOR THE ENTIRETY OF THE NOTE SOUND
+  //setTimeout(() => C4key.style.opacity = '0', 2000); 
+  // Play the note sound on the guitar
   setTimeout(() => playKeySound(C4GuitarAudio), 1500);
+
 };
 // pass C4 into playC4 function (which in turn triggers the playKeySound function with C4 as the audio parameter)
 C4key.addEventListener('click', playC4);
@@ -332,7 +355,7 @@ const F4TrainMode = const playF4 = () => {
 
 */
 
-// GUITAR
+// PLAY GUITAR ON MOUSEOVER
 
 const C4GuitarNote = document.getElementById('C4GuitarNote');
 const C4GuitarAudio = new Audio('guitar sound files/C4Guitar.mp3');
