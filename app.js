@@ -391,7 +391,20 @@ function createElement (element, content, elementClass) {
 
 
 // first let's create a variable to grab the fretboard2 div from the DOM 
-let fretboard2 = document.querySelector('.fretboard2');          
+let fretboard2 = document.querySelector('.fretboard2');  
+// now appending a string div from createElement function to fretboard2
+fretboard2.appendChild(createElement('div', 'stringhere')); 
+// we need to make the strings and everything in css, but there won't be any
+// hard coded html so it will still be blank. 
+// using string2 for divs and note2 for notes and note2::before for the green circles 
+
+
+
+
 
 // we neet to utilize :root to make fretboard2 css from css
-// then use loops to add the css variables to js, create new string / fret variables, then loop thru and append to the const fretboard2 
+// then use loops to add the css variables to js, create new string / fret variables, then loop thru and append to the const fretboard2
+
+
+
+// const root = document.documentElement; 
