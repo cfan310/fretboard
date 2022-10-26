@@ -361,7 +361,16 @@ const playC4Guitar = () => {
 // Create element dynamically with javascript
 // fr some reason it only lets us append to existing element via its id, not class
 // <div id="dynamicStrings"></div> 
-    
+
+/*
+let parentDiv = document.getElementById('parentDiv');  
+
+let newElement = document.createElement('p');  
+parentDiv.appendChild(newElement); 
+newElement.innerText = 'paragraph'; 
+newElement.classList.add('paragraph1'); 
+newElement.style.color = 'green'; 
+//document.body.removeChild(newElement);*/ 
 
 function createElement (element, content, elementClass) {
     // parameter will be the element (div, p, h1, etc);
@@ -376,16 +385,13 @@ function createElement (element, content, elementClass) {
     }
     return element;
 }; 
-document.body.appendChild(createElement('div', 'dynamic fretboard below', 'h1'));
+//document.body.appendChild(createElement('div', 'dynamic fretboard below', 'h1'));
+
+//document.getElementById('fretboard2').appendChild(createElement('div', 'fretboard goes here'));
 
 
+// first let's create a variable to grab the fretboard2 div from the DOM 
+let fretboard2 = document.querySelector('.fretboard2');          
 
-/*
-let parentDiv = document.getElementById('parentDiv');  
-
-let newElement = document.createElement('p');  
-parentDiv.appendChild(newElement); 
-newElement.innerText = 'paragraph'; 
-newElement.classList.add('paragraph1'); 
-newElement.style.color = 'green'; 
-//document.body.removeChild(newElement);*/ 
+// we neet to utilize :root to make fretboard2 css from css
+// then use loops to add the css variables to js, create new string / fret variables, then loop thru and append to the const fretboard2 
