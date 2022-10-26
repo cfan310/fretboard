@@ -1,17 +1,3 @@
-// dynamic js to create html strings and frets
-
-// create dynamic js functions for fretboard and piano
-// add variables for string locations
-// if mouseover, show piano note and string note (for each particular note location)
-// look into music apis for sound
-// add sound to html file
-// <audio> embed; on click, play sound of piano note, setTimeout js, then play corresponding note on guitar. And vice versa.
-// default mode is the mousing over of notes and standard playing of notes
-// ear training mode plays the correspoinding piano/fretboard note after one is clicked
-// also fretboard learning mdoe, where it keeps track of your right and wrong answers and reports back to you which ones you need to work on
-// ^research best algorithm for keeping track of right and wrong data
-
-// continue ading sounds, then finish the fretboard mouseover, then add fretboard sound, then add sound-for-sound logic, then add fretboard game logic
 
 /*
 
@@ -28,11 +14,6 @@ showBtn.addEventListener('click', showNotes);
 const showBtn = document.getElementById('showBtn');
 const hideBtn = document.getElementById('hideBtn');
 
-// add sound file for each key; play on click
-// then add sound files for every fret (hard-code at first, then use a loop)
-// then add asynch await so one plays after another (if the user is in that particular mode of play)
-
-// hard code at first; loop next?
 
 // audio variables
 // C4 octave
@@ -380,23 +361,31 @@ const playC4Guitar = () => {
 // Create element dynamically with javascript
 // fr some reason it only lets us append to existing element via its id, not class
 // <div id="dynamicStrings"></div> 
+    
 
-var parentDiv = document.getElementsByClassName('parentDiv');      
+function createElement (element, content, elementClass) {
+    // parameter will be the element (div, p, h1, etc);
+    element = document.createElement(element);
+    element.style.color = 'orange'; 
+    element.style.fontFamily = 'Arial-Black';
+    if (arguments.length > 1) {
+      element.innerText = content;  
+    }
+    if (arguments.length > 2) {
+      elementClass = element.classList.add(elementClass); 
+    }
+    return element;
+}; 
+document.body.appendChild(createElement('div', 'dynamic fretboard below', 'h1'));
 
-function createElement(element, content, elemClass) {
-  // parameter will be the element (div, p, h1, etc);
-  element = document.createElement(element);
-  if (arguments.length > 1) {
-    element.innerHTML = content;
-  }
-  return element;
-  parentDiv.appendChild(element); 
-}
-createElement('div');   
 
-var newElement = document.createElement('p'); 
-document.body.appendChild(newElement); 
+
+/*
+let parentDiv = document.getElementById('parentDiv');  
+
+let newElement = document.createElement('p');  
+parentDiv.appendChild(newElement); 
 newElement.innerText = 'paragraph'; 
 newElement.classList.add('paragraph1'); 
 newElement.style.color = 'green'; 
-//document.body.removeChild(newElement);
+//document.body.removeChild(newElement);*/ 
