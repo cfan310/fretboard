@@ -108,8 +108,8 @@ const playKeySound = (audio) => {
 
 // SHOW THE NOTE THAT IS CLICKED 
 
-const C4PianoLight = document.getElementsByClassName('C4-key');
-console.log(C4PianoLight.innerText); // should be C4 
+//const C4PianoLight = document.getElementsByClassName('C4-key');
+//console.log(C4PianoLight.innerText); // should be C4 
 
 /* in css .white-key:before {
   content: 'C'; // we will dynamically code w/ loop later 
@@ -369,7 +369,7 @@ const playC4Guitar = () => {
   // remove active so it resets after a few miliseconds
   setTimeout(() => C4GuitarNote.classList.remove('active'), 200);
 };
-C4GuitarNote.addEventListener('mouseover', playC4Guitar);
+//C4GuitarNote.addEventListener('mouseover', playC4Guitar);
 
 // ^not playing atm on mouseover
 
@@ -378,4 +378,24 @@ C4GuitarNote.addEventListener('mouseover', playC4Guitar);
 
 // DYNAMIC FRETBOARD 
 // Create element dynamically with javascript
-// Begin with div 
+// fr some reason it only lets us append to existing element via its id, not class
+// <div id="dynamicStrings"></div> 
+
+
+
+var string5 = document.createElement('div');
+string5.classList.add('string');
+//document.getElementsByClassName('parentDiv').appendChild(string5);      
+
+function createElement(element, content, elemClass) {
+  // parameter will be the element (div, p, h1, etc);
+  element = document.createElement(element);
+  if (arguments.length > 1) {
+    element.innerHTML = content;
+  }
+  if (arguments.length > 2) {
+    element.classList.add(elemClass);
+  }
+  return element;
+}
+console.log(createElement('div', 'im a div', 'string5')); 
