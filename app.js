@@ -381,11 +381,7 @@ const playC4Guitar = () => {
 // fr some reason it only lets us append to existing element via its id, not class
 // <div id="dynamicStrings"></div> 
 
-
-
-var string5 = document.createElement('div');
-string5.classList.add('string');
-//document.getElementsByClassName('parentDiv').appendChild(string5);      
+var parentDiv = document.getElementsByClassName('parentDiv');      
 
 function createElement(element, content, elemClass) {
   // parameter will be the element (div, p, h1, etc);
@@ -393,9 +389,14 @@ function createElement(element, content, elemClass) {
   if (arguments.length > 1) {
     element.innerHTML = content;
   }
-  if (arguments.length > 2) {
-    element.classList.add(elemClass);
-  }
   return element;
+  parentDiv.appendChild(element); 
 }
-console.log(createElement('div', 'im a div', 'string5')); 
+createElement('div');   
+
+var newElement = document.createElement('p'); 
+document.body.appendChild(newElement); 
+newElement.innerText = 'paragraph'; 
+newElement.classList.add('paragraph1'); 
+newElement.style.color = 'green'; 
+//document.body.removeChild(newElement);
