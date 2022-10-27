@@ -388,4 +388,9 @@ const F4TrainMode = const playF4 = () => {
 
 
 */
-console.log(C4key.innerText);
+
+
+// On hover, light up the note names in green 
+
+
+
