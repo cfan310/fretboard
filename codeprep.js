@@ -6,6 +6,28 @@ const hideBtn = document.querySelector('.hideBtn');
 // piano container div
 const piano = document.querySelector('.piano');
 
+// get root element
+//var root = document.querySelector('.root'); 
+const root = document.documentElement;
+
+// set variable in css piano
+// setProperty(propertyName, value) 
+//root.style.setProperty('--number-of-octaves', numberOfOctaves);
+//root.style.setProperty('--number-of-strings', numberOfStrings);
+
+//let numberOfOctaves = 7; 
+//let numberOfStrings = 6; 
+
+// fretboard3 build with css 
+
+// also will create loop to automatically create more octaves depending on our input for the css variable numberOfOctaves 
+// 
+
+
+
+
+
+
 // show notes on click
 /* function showNotesOnClick() {
     showBtn.addEventListener('click', function() {
@@ -391,6 +413,7 @@ const F4TrainMode = const playF4 = () => {
 
 
 // On hover, light up the note names in green 
+
 
 
 

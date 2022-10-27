@@ -18,6 +18,26 @@ body {
   --Eb4-key-position: 310;
 }
 
+.fretboard3 {
+  height: 300px;
+  background: rgb(107, 61, 8);
+  margin-top: 40px; 
+}
+
+.string3 {
+  height: 10px;
+  width: 100%;
+  background: silver;
+  margin: 40px;
+  top: 10px;
+}
+
+
+
+#C4PianoLight {
+  opacity: 90;
+}
+
 .menu {
   display: flex;
   justify-content: center;
