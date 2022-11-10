@@ -6,6 +6,8 @@ const hideBtn = document.querySelector('.hideBtn');
 // piano container div
 const piano = document.querySelector('.piano');
 
+// add harcoded css
+
 // get root element
 //var root = document.querySelector('.root'); 
 const root = document.documentElement;
